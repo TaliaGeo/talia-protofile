@@ -3,351 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>taliaWebPage</title>
+    <title>Talia Web Page</title>
     <style>
-        html,body{
-            height:100%;
-            margin:0;
-            overflow-x: hidden; 
+        html, body {
+            height: 100%;
+            margin: 0;
+            overflow-x: hidden;
         }
 
-    *{
-        justify-content: center;
-      margin: 0;  
-      padding:0;
-      box-sizing: border-box;
-    }
+        * {
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-    font-family:Arial, Helvetica, sans-serif ;
-    display: flex;
-   height :100%;
-   scroll-behavior: smooth;
-
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            height: 100%;
+            scroll-behavior: smooth;
         }
-        .container{
+
+        .container {
             text-align: center;
             justify-content: center;
-            width:100%;
-            background-color:white;
-            display:flex;
-            height:100%;
+            width: 100%;
+            background-color: white;
+            display: flex;
+            height: 100%;
         }
-        .aside{
+
+        .aside {
             text-align: center;
             justify-content: center;
             display: flex;
-            width:20%;
-            height:100%;
+            align-items: center;
+            width: 20%;
+            height: 100%;
             flex-direction: column;
-            background-color:orange;
-            padding-top:40px;
+            background-color: orange;
+            padding-top: 0;
             position: fixed;
-            top: 0; 
-            left:0;
+            top: 0;
+            left: 0;
             z-index: 10;
-            
-            
-        }
-        .menu{
-            height:100%;
-            list-style-type:circle;
-            margin:10px;
-            justify-content: center;
-            text-align: center;
-
-        }
-        ul{
-            text-decoration: none;
-            list-style: none;
-            list-style-type: none;
         }
 
-        .image{
-            text-align: center;
+        .menu {
+            height: 100%;
+            margin: 10px;
             justify-content: center;
-            border: 1px solid;
-            height:650px;
-            width:150px;
-            border-radius:200px;
-            margin-bottom:15px;
-            margin-left: 60px;
-            
-           
+            text-align: center;
         }
-        .menu .child{
-            list-style-type: none;
-            margin-bottom:15px ;
-            color:white;
-            font-size:18px;
-            padding:15px;
-          margin-left:25px;
+
+        .menu .child {
+            margin-bottom: 15px;
+            color: white;
+            font-size: 18px;
+            padding: 15px;
+            margin-left: 0;
         }
-        .menu .child a{
+
+        .menu .child a {
             display: block;
-            color:white; 
-            text-decoration: none;  
+            color: white;
+            text-decoration: none;
         }
-        .menu .child a:hover{
+
+        .menu .child a:hover {
             background-color: rgb(255, 225, 0);
         }
 
-        .content{
-            width:80%;
-            height:100%;
-            background-color: white;
-            flex-grow:1;
-           align-self: flex-start;
-           padding:20px;
-           margin-left:370px;
-           padding-top:100px;
-           
-           
-            
+        ul {
+            list-style: none;
+            padding: 0;
         }
+
+        .image {
+            text-align: center;
+            justify-content: center;
+            border: 1px solid;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .content {
+            width: 80%;
+            height: 100%;
+            background-color: white;
+            flex-grow: 1;
+            align-self: flex-start;
+            padding: 20px;
+            margin-left: 370px;
+            padding-top: 100px;
+        }
+
         section {
-    padding: 50px 0; 
-    margin: 0 auto;
-    width: 90%;
-    max-width: 1200px; 
-}
+            padding: 50px 0;
+            margin: 0 auto;
+            width: 90%;
+            max-width: 1200px;
+        }
+
         section:target {
             display: block;
         }
-        section p{
-            font-size:14px;
+
+        section p {
+            font-size: 14px;
             line-height: 1.5;
-            
         }
+
         .social-icons {
-            display:flex;
+            display: flex;
             justify-content: space-around;
-            margin-top:20px ;
+            margin-top: 20px;
             width: 30px;
             height: 30px;
-            border-radius:200px;
+            border-radius: 200px;
         }
+
         .language {
-           
-           display:flex;
-           justify-content: space-around;
-           margin-top:20px ;
-           width: 30px;
-           height: 30px;
-           border-radius:200px;
-       }
-       .languages{
-            color: red;
-            list-style-type:circle;
-            margin:10px;
-
-        }
-        .sk{
-            color: red;
-            list-style-type:circle;
-            margin:40px;
-
-        }
-        .contact-form {
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            width: 30px;
+            height: 30px;
+            border-radius: 200px;
         }
 
-        .contact-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .contact-form textarea {
-            height: 120px;
-        }
-
-        .contact-form button {
-            background-color: orange;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background-color: blue;
-        }
-      
-        @media (max-width:730px){
-            .aside{
-                width:25%
+        @media (max-width: 730px) {
+            .aside {
+                width: 25%;
+                align-items: center;
             }
-            .content{
-                padding:10px;
-                margin-left:200px;
-                width:75%;
 
+            .content {
+                padding: 10px;
+                margin-left: 200px;
+                width: 75%;
             }
-            .image{
-                margin-left: 10px;
+
+            .image {
+                margin: 0;
             }
         }
-        
     </style>
 </head>
 <body>
     <div class="container">
         <div class="aside">
-            <img src="profileimage.jpg" alt="talia Profile Picture" class="image">
-            
-            <ul class ="menu">
-                <li class ="child" ><a href="#About">About</a></li>
-                <li class ="child"><a href="#Experience">Experience</a></li> 
-                <li class ="child"><a href="#Education">Education</a></li> 
-                <li class ="child"><a href="#Skills">Skills</a></li> 
-                <li class ="child"><a href="#Interests">Interests</a></li> 
-                <li class ="child"><a href="#Awards">Awards</a></li>
+            <img src="profileimage.jpg" alt="Talia Profile Picture" class="image">
+            <ul class="menu">
+                <li class="child"><a href="#About">About</a></li>
+                <li class="child"><a href="#Experience">Experience</a></li>
+                <li class="child"><a href="#Education">Education</a></li>
+                <li class="child"><a href="#Skills">Skills</a></li>
+                <li class="child"><a href="#Interests">Interests</a></li>
+                <li class="child"><a href="#Awards">Awards</a></li>
                 <li class="child"><a href="#Contact">Contact</a></li>
             </ul>
-            
         </div>
-        <div class ="content">
-            <section  id="About" style="margin-bottom:600px; text-align: end;" >
-               <h1 style="color: red;margin-top:140px;text-align:center;">TALIA QATIMEH </h1>
-               
-
-               <p style="margin-top: 10px;text-align: center;"><b>Hello, my name is Talia Qatimeh. I am currently studying Software Engineering at Bethlehem University
-                 and taking a web development course with Dr. Mohammad Ghattas. I live in Beit Jala and have one brother,
-                  but no sisters. I graduated from Collège des Frères in Bethlehem.</b></p>
-            <div class="social-icons">
-<a href="https://www.facebook.com/" target="_blank">
-    <img src="icons/facebook-icon.png" alt="FB" class="social-icons">
-</a>
-<a href="https://www.instagram.com/" target="_blank">
-    <img src="icons/instegram-Icon.jpg" alt="Insta" class="social-icons">
-</a>
-<a href="https://github.com/" target="_blank">
-    <img src="icons/github-icon-28.jpg" alt="gitHub" class="social-icons">
-</a>
-            </div>
-                </section>
+        <div class="content">
+            <section id="About" style="margin-bottom:600px;">
+                <h1 style="color: red; margin-top:140px; text-align:center;">TALIA QATIMEH</h1>
+                <p style="margin-top: 10px; text-align: center;">
+                    <b>Hello, my name is Talia Qatimeh. I am currently studying Software Engineering at Bethlehem University
+                    and taking a web development course with Dr. Mohammad Ghattas. I live in Beit Jala and have one brother,
+                    but no sisters. I graduated from Collège des Frères in Bethlehem.</b>
+                </p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="icons/facebook-icon.png" alt="FB" class="social-icons">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="icons/instegram-Icon.jpg" alt="Insta" class="social-icons">
+                    </a>
+                    <a href="https://github.com/" target="_blank">
+                        <img src="icons/github-icon-28.jpg" alt="GitHub" class="social-icons">
+                    </a>
+                </div>
+            </section>
             <section id="Experience" style="margin-bottom: 500px;">
-                <h1 style="margin-top:100px;color:red;text-align: center;"> Experience</h1>
-                <h2 style="color:red;margin-top:20px;text-align: center;"> Professional Experience</h2>
+                <h1 style="margin-top:100px;color:red;text-align: center;">Experience</h1>
+                <h2 style="color:red;margin-top:20px;text-align: center;">Professional Experience</h2>
                 <p style="margin-top: 10px;text-align:center;">
-                   <b>I graduated and enrolled at Bethlehem University while working part-time as a Production Coordinator
-                     at Power Group PGP for a year. I also worked as a Secretary at Inad Theatre for six months, gaining 
-                     valuable experience in administration and communication.</b></p>
-               
-               <h2 style="color:red;margin-top:20px;text-align: center;">Extracurricular Involvement </h2>
+                    <b>I graduated and enrolled at Bethlehem University while working part-time as a Production Coordinator
+                    at Power Group PGP for a year. I also worked as a Secretary at Inad Theatre for six months, gaining 
+                    valuable experience in administration and communication.</b>
+                </p>
+                <h2 style="color:red;margin-top:20px;text-align: center;">Extracurricular Involvement</h2>
                 <p style="text-align: center;">I participated in the IEEE Xtreme 2024 competition, where my team won an award. I served as Treasurer 
                 for the IEEE at Bethlehem University and was active in the Debate Club at Collège des Frères, competing 
                 in events in Jordan, Slovenia, and Palestine. Additionally, I participated in a choral competition in Strasbourg, France.
-               </p>
+                </p>
             </section>
             <section id="Education" style="margin-bottom:500px;">
                 <h1 style="color: red;margin-top:100px;text-align: center;">Education</h1>
                 <h2 style="color:red;margin-top:40px;text-align: center;">Educational Background</h2>
-                
                 <p style="margin-top:10px;text-align: center;">
                     <b>At Bethlehem University, I gained practical experience and developed essential
-                    skills, particularly through my  participation in the Debate Club at Collège
+                    skills, particularly through my participation in the Debate Club at Collège
                     des Frères. Competing in events across Jordan, Slovenia, and Palestine enhanced
-                     my public speaking and critical thinking abilities.</b></p>
-                     <h2 style="color:red;margin-top:30px;text-align: center;">Language Proficiency</h2>
-                     <p style="margin-top: 10px;text-align: center;">
-                       <b> I am committed to improving my language skills, having achieved a B1 level in
-                         French and passed both the TOEFL and English proficiency tests. These 
-                         accomplishments reflect my dedication to effective communication.</b></p>
+                    my public speaking and critical thinking abilities.</b>
+                </p>
             </section>
             <section id="Skills" style="margin-bottom:500px;">
                 <h1 style="color:red;margin-top:130px;text-align: center;">Skills</h1>
-                
                 <p style="margin-top: 20px;text-align: center;"><b>
                     I have developed a solid skill set in web and software development, with proficiency
-                     in key programming languages such as Java, JavaScript, HTML, and CSS. My experience 
-                     with Java enables me to create efficient, object-oriented applications, while my knowledge
-                      of JavaScript allows me to build dynamic, interactive web experiences. I am also well-versed 
-                      in HTML and CSS, which I use to design and structure visually appealing and responsive websites.
-                       These skills allow me to contribute to both front-end and back-end development, making me capable
-                        of developing full-stack solutions and crafting seamless user experiences across a range of platforms.</b></p>
-                        <ul class ="languages">
-                                   <li class ="childd" >Html</li>
-                                   <li class ="childd">Css</li> 
-                                   <li class ="childd">Java</li> 
-                                   <li class ="childd">Java Script</li> 
-                               </ul>
-                        <div class ="language">
-                            <a href="https://www.w3schools.com/html/" target="_blank">
-                                <img src="icons/html-icon.png" alt="ht" class="language">
-                            </a>
-                            <a href="https://www.w3schools.com/css/" target="_blank">
-                                <img src="icons/cpp-icon.png" alt="CSSS" class="language">
-                            </a>
-                            <a href="https://www.w3schools.com/js/" target="_blank">
-                                <img src="icons/javascript-icon.webp" alt="Jsgb" class="language">
-                            </a>  
-                            
-                        </div>
+                    in key programming languages such as Java, JavaScript, HTML, and CSS.
+                </b></p>
             </section>
-            <section id="Interests" style="margin-bottom:580px;"> 
-                <h1 style="color: red;margin-top:100px;text-align: center;">Interests</h1>
-                
-                <p style="margin-top:20px;text-align:center;"><b>I have a variety of interests that reflect my love for creativity and nature. I enjoy reading extensively, as it allows 
-                    me to explore new ideas and expand my knowledge. Photography is another passion of mine; I love capturing beautiful moments
-                     and preserving memories through pictures. Whether it's my interest in caring for animals.</b></p>
-                       <p style="margin-top: 20px;text-align: center;"><b>
-                        In addition to my creative and nature-focused interests, I’m also passionate about technology and innovation. I enjoy staying up-to-date
-                         with the latest trends in software development, tech gadgets, and digital tools. Exploring new technologies fuels my curiosity and helps
-                          me find fresh ways to solve problems. Oor culinary exploration, I’m always looking for ways to challenge myself and grow.
-                       </b></p>
-            </section>
-            <section id="Awards" style="margin-bottom:500px; ">
-                <h1 style="color: red; margin-top: 130px;text-align: center;">Awards & Certification</h1>
-                
-                <p style="text-align: center;margin-top:20px;"> I have received several awards, including a top performance award in my web development course and a
-                     certificate of excellence for organizing a successful charity event at university. I was also recognized with 
-                     a leadership award for my contributions to student clubs and workshops. These awards reflect my commitment to both 
-                     academic achievement and community involvement.</p>
-                     <ul class ="sk">
-                        <li class ="childdd" >Top Performance Award in web development</li>
-                        <li class ="childdd">Certificate of Excellence for organizing a charity event.</li> 
-                        <li class ="childdd">Leadership Award for contributions to student clubs and workshops.</li> 
-                        <li class ="childdd">Reflects my focus on academic achievement and community involvement.</li> 
-                    </ul>
-            </section>
-            <section id="Contact" style="  margin-bottom: 500px;margin-top:40px;">
-                <h1 style="color: red;margin-top:100px;text-align: center;">Contact</h1>
-                <p style="margin-top:20px;text-align: center;">
-                    <b>If you'd like to get in touch, feel free to send me a message through the form below. I'm always open
-                    to networking opportunities, collaborations, and discussions about technology, software engineering, and
-                    any other exciting topics!</b></p>
+            <section id="Contact" style="margin-bottom:500px;">
+                <h1 style="color:red;text-align: center;">Contact</h1>
                 <div class="contact-form">
                     <form action="submit_form.php" method="POST">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" name="name" required>
-            
                         <label for="email">Your Email</label>
                         <input type="email" id="email" name="email" required>
-            
                         <label for="message">Your Message</label>
                         <textarea id="message" name="message" required></textarea>
-            
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
             </section>
-
         </div>
-    
     </div>
 </body>
-</html> 
+</html>
